@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-test-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/03/test-1/" class="article-date">
+  <time datetime="2016-09-03T14:28:02.000Z" itemprop="datePublished">2016-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/03/test-1/">test</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/03/test-1/" data-id="cisnaaxmt000216wv6w7ph21n" class="article-share-link">Поделиться</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/03/test/" class="article-date">
+  <time datetime="2016-09-03T14:07:19.000Z" itemprop="datePublished">2016-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/03/test/">test</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/03/test/" data-id="cisnaaxnn000g16wvkvcg60e1" class="article-share-link">Поделиться</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-linux下软件打包方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/13/linux下软件打包方法/" class="article-date">
+  <time datetime="2016-08-13T07:19:47.000Z" itemprop="datePublished">2016-08-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/13/linux下软件打包方法/">Linux下软件打包方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>根据可执行文件，更改可执行文件所在文件夹名称，与可执行文件保持一致</li>
+<li>更改application/lib中desktop和png的名称，与可执行文件名保持一致</li>
+<li>更改DEBIAN文件夹中control、postinst、postrm三文件代码可执行文件、desktop及png名称。</li>
+<li>将更改好的文件夹发送到linux服务器<br><code>scp -r 文件名 服务器地址（如foodroot asion@192.168.8.8:~/）</code>
+        
+          <p class="article-more-link">
+            <a href="/2016/08/13/linux下软件打包方法/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/13/linux下软件打包方法/" data-id="cisnaaxnf000b16wv53uocq0b" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-廖雪峰JavaScriptt教程笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/09/廖雪峰JavaScriptt教程笔记/" class="article-date">
+  <time datetime="2016-07-08T16:00:00.000Z" itemprop="datePublished">2016-07-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/09/廖雪峰JavaScriptt教程笔记/">廖雪峰JavaScript教程笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h1><ul>
+<li>“==”会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</li>
+<li>“===”不会自动转换数据类型。</li>
+<li>NaN与所有其他值都不相等，包括它自己：NaN===NaN;  //false</li>
+<li>唯一能判断NaN的方法是通过isNaN()函数。</li>
+</ul>
+<p>‘use strict’</p>
+<blockquote>
+<p>在strict模式下运行的JavaScript代码，强制通过var申明变量，未使用var申明变量就使用的，将导致错误。</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/09/廖雪峰JavaScriptt教程笔记/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/09/廖雪峰JavaScriptt教程笔记/" data-id="cisnaaxo5000w16wvg0gosy4u" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-锋利的jQueryy笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/08/锋利的jQueryy笔记/" class="article-date">
+  <time datetime="2016-07-07T16:00:00.000Z" itemprop="datePublished">2016-07-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/08/锋利的jQueryy笔记/">《锋利的jQuery》笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第一章-认识jQuery"><a href="#第一章-认识jQuery" class="headerlink" title="第一章 认识jQuery"></a>第一章 认识jQuery</h1><h3 id="jQuery对象转DOM对象方法，-index-和get-index"><a href="#jQuery对象转DOM对象方法，-index-和get-index" class="headerlink" title="jQuery对象转DOM对象方法，[index]和get(index)"></a>jQuery对象转DOM对象方法，[index]和get(index)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cr = $cr[<span class="number">0</span>];  </div><div class="line"><span class="keyword">var</span> cr = $cr.get[<span class="number">0</span>];</div></pre></td></tr></table></figure>
+<h3 id="DOM对象转jQuery对象方法，只需用-包装即可"><a href="#DOM对象转jQuery对象方法，只需用-包装即可" class="headerlink" title="DOM对象转jQuery对象方法，只需用$()包装即可"></a>DOM对象转jQuery对象方法，只需用$()包装即可</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $cr = $(cr);</div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/08/锋利的jQueryy笔记/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/08/锋利的jQueryy笔记/" data-id="cisnaaxo2000s16wvh97ycpyx" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-廖雪峰jQuery教程笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/07/廖雪峰jQuery教程笔记/" class="article-date">
+  <time datetime="2016-07-07T13:32:08.000Z" itemprop="datePublished">2016-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/07/廖雪峰jQuery教程笔记/">廖雪峰jQuery教程笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><p>利用jQuery查找返回的是<i><code>jQuery对象</code></i>，<i><code>jQuery对象</code></i>类似于数组，它的每一个元素都是一个引用了DOM节点的对象。返回的<code>jQuery对象</code>如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'abc'</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>]</div><div class="line"><span class="comment">//若不存在则返回[]</span></div><div class="line"><span class="comment">//不会返回defined或null</span></div></pre></td></tr></table></figure></p>
+<p>查找同时包含多个class节点的元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = $(<span class="string">'.red.green'</span>);<span class="comment">//注意：没有空格！</span></div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/07/廖雪峰jQuery教程笔记/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/07/廖雪峰jQuery教程笔记/" data-id="cisnaaxo0000q16wvzeoy0bya" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Bootstrap学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/04/Bootstrap学习笔记/" class="article-date">
+  <time datetime="2016-07-04T11:17:56.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/04/Bootstrap学习笔记/">Bootstrap学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><ul>
+<li>可以使用<code>&lt;h1&gt;...&lt;h6&gt;</code>,也可以使用类名h1~h6</li>
+<li>使用<code>&lt;small&gt;</code>制作副标题</li>
+</ul>
+<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>默认字号:14p，line-height:1,42857143，颜色为深灰色，字体为sans-serif(可根据需要进行修改)<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/04/Bootstrap学习笔记/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/04/Bootstrap学习笔记/" data-id="cisnaaxml000016wv6xpt41en" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git常用命令及常见问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/03/git常用命令及常见问题/" class="article-date">
+  <time datetime="2016-07-03T10:26:17.000Z" itemprop="datePublished">2016-07-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/git/">git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/03/git常用命令及常见问题/">git常用命令及常见问题(持续更新)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="git-push-每次都要输入用户名和密码"><a href="#git-push-每次都要输入用户名和密码" class="headerlink" title="git push 每次都要输入用户名和密码"></a>git push 每次都要输入用户名和密码</h3><p>解决办法：<br><code>git config --global credential.helper store</code></p>
+<h3 id="获取id-rsa-pub"><a href="#获取id-rsa-pub" class="headerlink" title="获取id_rsa.pub"></a>获取id_rsa.pub</h3><p>解决办法:<br><code>cd ~/.ssh</code><br><code>ls</code><br><code>cat ~/.ssh/id_rsa.pub</code><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/03/git常用命令及常见问题/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/03/git常用命令及常见问题/" data-id="cisnaaxns000l16wv19moitjj" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SASS学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/02/SASS学习笔记/" class="article-date">
+  <time datetime="2016-07-02T15:20:14.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/02/SASS学习笔记/">SASS学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mac-安装"><a href="#mac-安装" class="headerlink" title="mac 安装"></a>mac 安装</h1><pre>sudo gem install sass</pre>
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><pre>sass test.scss test.css</pre>
+
+<h3 id="四种默认风格"><a href="#四种默认风格" class="headerlink" title="四种默认风格"></a>四种默认风格</h3><ul>
+<li>nested：嵌套缩进，它是默认值。</li>
+<li>expanded: 无缩进无扩展</li>
+<li>compact: 简洁风格</li>
+<li>compressed: 压缩后的，一般使用这项</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/02/SASS学习笔记/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/02/SASS学习笔记/" data-id="cisnaaxnd000816wvzmgnt3x0" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HEXO问题及技巧汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/02/HEXO问题及技巧汇总/" class="article-date">
+  <time datetime="2016-07-02T07:30:00.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Blog/">Blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/02/HEXO问题及技巧汇总/">HEXO常用命令、常见问题及技巧汇总</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">npm install hexo -g <span class="comment">//安装</span></div><div class="line">npm update hexo -g <span class="comment">//升级</span></div><div class="line">hexo init <span class="comment">//初始化</span></div><div class="line">hexo n <span class="comment">//新建文章</span></div><div class="line">hexo p <span class="comment">//发布你的草稿</span></div><div class="line">hexo s <span class="comment">//启动服务器预览</span></div><div class="line">hexo g <span class="comment">//生成静态网页</span></div><div class="line">hexo d <span class="comment">//部署</span></div><div class="line">hexo c <span class="comment">//清除缓存</span></div></pre></td></tr></table></figure>
+<h3 id="1-TypeError-Cannot-read-property-‘replace’-of-undefined"><a href="#1-TypeError-Cannot-read-property-‘replace’-of-undefined" class="headerlink" title="1. TypeError: Cannot read property ‘replace’ of undefined"></a>1. TypeError: Cannot read property ‘replace’ of undefined</h3><p>   解决办法：<br>   重新初始化hexo。  <code>hexo init</code></p>
+<h3 id="2-hexo-deploy-没动静"><a href="#2-hexo-deploy-没动静" class="headerlink" title="2. hexo deploy 没动静"></a>2. hexo deploy 没动静</h3><p>   解决办法：<br>   在站点的<code>_config.yml</code>文件中找到<code>deploy:</code>标签，在每个冒号后面必须要加上空格。</p>
+<h3 id="3-部署找不到git"><a href="#3-部署找不到git" class="headerlink" title="3. 部署找不到git"></a>3. 部署找不到git</h3><p>   解决办法：<br>   <code>npm install hexo-deployer-git --save</code><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/07/02/HEXO问题及技巧汇总/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/02/HEXO问题及技巧汇总/" data-id="cisnaaxnh000e16wv61hsmrc7" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HEXO/">HEXO</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Категории</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/游记/">游记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Метки</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/名人墓/">名人墓</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Облако меток</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/名人墓/" style="font-size: 10px;">名人墓</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/09/03/test-1/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/03/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/13/linux下软件打包方法/">Linux下软件打包方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/09/廖雪峰JavaScriptt教程笔记/">廖雪峰JavaScript教程笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/08/锋利的jQueryy笔记/">《锋利的jQuery》笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

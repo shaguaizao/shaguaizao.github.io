@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>廖雪峰jQuery教程笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="选择器利用jQuery查找返回的是jQuery对象，jQuery对象类似于数组，它的每一个元素都是一个引用了DOM节点的对象。返回的jQuery对象如下：123[&amp;lt;div id=&apos;abc&apos;&amp;gt;...&amp;lt;/div&amp;gt;]//若不存在则返回[]//不会返回defined或null
+查找同时包含多个class节点的元素1var a = $(&apos;.red.green&apos;);//注意：没有空格！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="廖雪峰jQuery教程笔记">
+<meta property="og:url" content="http://yoursite.com/2016/07/07/廖雪峰jQuery教程笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="选择器利用jQuery查找返回的是jQuery对象，jQuery对象类似于数组，它的每一个元素都是一个引用了DOM节点的对象。返回的jQuery对象如下：123[&amp;lt;div id=&apos;abc&apos;&amp;gt;...&amp;lt;/div&amp;gt;]//若不存在则返回[]//不会返回defined或null
+查找同时包含多个class节点的元素1var a = $(&apos;.red.green&apos;);//注意：没有空格！">
+<meta property="og:updated_time" content="2016-07-19T15:09:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="廖雪峰jQuery教程笔记">
+<meta name="twitter:description" content="选择器利用jQuery查找返回的是jQuery对象，jQuery对象类似于数组，它的每一个元素都是一个引用了DOM节点的对象。返回的jQuery对象如下：123[&amp;lt;div id=&apos;abc&apos;&amp;gt;...&amp;lt;/div&amp;gt;]//若不存在则返回[]//不会返回defined或null
+查找同时包含多个class节点的元素1var a = $(&apos;.red.green&apos;);//注意：没有空格！">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-廖雪峰jQuery教程笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/07/廖雪峰jQuery教程笔记/" class="article-date">
+  <time datetime="2016-07-07T13:32:08.000Z" itemprop="datePublished">2016-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      廖雪峰jQuery教程笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><p>利用jQuery查找返回的是<i><code>jQuery对象</code></i>，<i><code>jQuery对象</code></i>类似于数组，它的每一个元素都是一个引用了DOM节点的对象。返回的<code>jQuery对象</code>如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'abc'</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>]</div><div class="line"><span class="comment">//若不存在则返回[]</span></div><div class="line"><span class="comment">//不会返回defined或null</span></div></pre></td></tr></table></figure></p>
+<p>查找同时包含多个class节点的元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = $(<span class="string">'.red.green'</span>);<span class="comment">//注意：没有空格！</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>当属性的值包含空格等特殊字符时，需要用双引号括起来。</p>
+<h2 id="查找和过滤"><a href="#查找和过滤" class="headerlink" title="查找和过滤"></a>查找和过滤</h2><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ul>
+<li>find() <em>在某个节点的子节点中查找</em></li>
+<li>parent() <em>从当前节点向上查找</em></li>
+<li>next()</li>
+<li>prew()</li>
+</ul>
+<h3 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h3><ul>
+<li>filter() <em>可传入函数，要特别注意，函数内部的this被绑定为DOM对象，不是jQuery对象。</em></li>
+<li>map()<em>把一个jQuery对象包涵的若干DOM节点转化为其他对象</em></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> langs = $(<span class="string">'ul.lang li'</span>);</div><div class="line"><span class="keyword">var</span> arr = langs.map(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.innerHTML;</div><div class="line">&#125;).get();<span class="comment">//用get()拿到包含string的Array</span></div></pre></td></tr></table></figure>
+<ul>
+<li>first()</li>
+<li>last()</li>
+<li>slice()</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="keyword">this</span>.type !== <span class="string">"radio"</span> || <span class="keyword">this</span>.checked)等价于</div><div class="line"><span class="keyword">if</span>(<span class="keyword">this</span>.type!==<span class="string">'radio'</span>||<span class="keyword">this</span>.type===<span class="string">'radio'</span>&amp;&amp;<span class="keyword">this</span>.checked)</div></pre></td></tr></table></figure>
+<h1 id="操作DOM"><a href="#操作DOM" class="headerlink" title="操作DOM"></a>操作DOM</h1><h2 id="修改Text和HTML"><a href="#修改Text和HTML" class="headerlink" title="修改Text和HTML"></a>修改Text和HTML</h2><p>注意：jQuery对象的所有方法都返回一个jQuery对象（可能时新的，也可能是自身），这样我们可以进行链式调用，非常方便。</p>
+<ul>
+<li>css();<em>获取设置元素css</em></li>
+<li>hasClass();</li>
+<li>addClass();</li>
+<li>removeClass();</li>
+<li>show();<em>修改display属性</em></li>
+<li>hide();</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//*浏览器可视窗口大小*</span></div><div class="line">$(<span class="built_in">window</span>).width();</div><div class="line">$(<span class="built_in">window</span>).height();</div><div class="line"><span class="comment">//*同理文档大小，window改为document即可。*</span></div><div class="line"><span class="comment">//*某个div的大小*</span></div><div class="line">div.width();</div></pre></td></tr></table></figure>
+<ul>
+<li>attr()</li>
+<li>removeAttr()</li>
+<li>prop()</li>
+</ul>
+<p>attr()和prop()对于属性checked处理有所不同。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">radio.attr(<span class="string">'checked'</span>);<span class="comment">//'checked'</span></div><div class="line">radio.prop(<span class="string">'checked'</span>);<span class="comment">//true</span></div><div class="line">radio.is(:checked);<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<p><code>is()</code>最佳</p>
+<h2 id="操作表单"><a href="#操作表单" class="headerlink" title="操作表单"></a>操作表单</h2><p>val()获取和设置对应的value属性。</p>
+<h2 id="修改DOM结构"><a href="#修改DOM结构" class="headerlink" title="修改DOM结构"></a>修改DOM结构</h2><ul>
+<li>append()</li>
+<li>prepend()</li>
+<li>after()</li>
+<li>before()</li>
+<li>remove()<em>删除节点</em></li>
+</ul>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p><code>on</code>方法用来绑定一个事件，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">alert(<span class="string">'hello!'</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//等价于</span></div><div class="line">a.click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">alert(<span class="string">'hello!'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><ul>
+<li>click:鼠标单击时触发</li>
+<li>dbclick:鼠标双击时触发</li>
+<li>mouseenter:鼠标进入时触发</li>
+<li>mouseleave:鼠标离开触发</li>
+<li>mousemove:鼠标做DOM内部移动时触发</li>
+<li>hover:鼠标进入和退出时触发两个函数，相当于mouseenter 和mouseleave</li>
+</ul>
+<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><p>键盘事件仅作用在当前焦点的DOM上，通常是<code>&lt;input&gt;</code>和<code>&lt;textaera&gt;</code></p>
+<ul>
+<li>keydown:键盘按下时触发</li>
+<li>keyup：键盘松开时触发</li>
+<li>keypress：按一次键后触发</li>
+</ul>
+<h2 id="其他事件"><a href="#其他事件" class="headerlink" title="其他事件"></a>其他事件</h2><ul>
+<li>focus:当DOM获得焦点时触发</li>
+<li>blur:当DOM失去焦点时触发</li>
+<li>change:当<code>&lt;input&gt;&lt;select&gt;</code>或<code>&lt;textarea&gt;</code>的内容改编时触发</li>
+<li>submit:当<code>&lt;form&gt;</code>提交时触发</li>
+<li>ready:当页面被载入并且DOM树完成初始化后触发，仅作用于<code>document</code></li>
+</ul>
+<p><strong>注意：初始化的代码必须放到document对象的ready事件中，保证DOM已完成初始化</strong></p>
+<h2 id="事件参数"><a href="#事件参数" class="headerlink" title="事件参数"></a>事件参数</h2><p>有些事件会传入Event对象作为参数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">'#test'</span>).mousemove(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">        $(<span class="string">'testSpan'</span>).text(<span class="string">'pageX = '</span>+e.pageX+<span class="string">',pageY='</span>+e.pageY);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="取消绑定"><a href="#取消绑定" class="headerlink" title="取消绑定"></a>取消绑定</h2><p>off(‘click’,function);</p>
+<h2 id="事件触发条件"><a href="#事件触发条件" class="headerlink" title="事件触发条件"></a>事件触发条件</h2><p>事件的触发总是由用户操作引起的，当用户在文本框中输入时，就会触发change事件，但如果用JS代码去改动，不回触发，若希望触发，可直接调用input.change()==input.trigger(‘change’)</p>
+<h2 id="浏览器安全限制"><a href="#浏览器安全限制" class="headerlink" title="浏览器安全限制"></a>浏览器安全限制</h2><p>有些JS代码只有在用户触发下才能执行，例如，<code>window.open()</code><br>用户可通过单击直接触发，延迟调用则会被浏览器拦截</p>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><ul>
+<li>show()</li>
+<li>hide()</li>
+<li>toggle()</li>
+<li>slideUp()</li>
+<li>slideDown()</li>
+<li>slideToggle()</li>
+<li>fadeIn()</li>
+<li>fadeOut()</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div.fadeOut(<span class="string">'slow'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="keyword">this</span>).remove();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>fadeToggle()</li>
+<li>animate()</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">div.animate(&#123;</div><div class="line">    opacity:<span class="number">0.25</span>;</div><div class="line">    width:<span class="string">'256px'</span>;</div><div class="line">    height:<span class="string">'256px'</span>;</div><div class="line">&#125;,<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">''</span>);</div><div class="line">    $(<span class="keyword">this</span>).css(<span class="string">'opacity'</span>,<span class="string">'1.0'</span>).css(<span class="string">'width'</span>,<span class="regexp">/128px').css('height','128px');&#125;);</span></div></pre></td></tr></table></figure>
+<ul>
+<li>delay()//暂停</li>
+</ul>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><p>ajax(url,settings)需要接收一个url和一个可选的settings对象，常用的选项如下：</p>
+<ul>
+<li>async: 是否异步执行AJAX请求，默认为true,千万不要指定为false</li>
+<li>method：发送的method，缺省为GET，可指定为POST、PUT等</li>
+<li>contentType: 发送POST请求的格式，默认值为application/x-www-form-urlencoded;charset=UTF-8,也可以指定为text/plain,application/json</li>
+<li>data: 发送的数据，可以是字符串，数组或object。如果GET请求，data将被转换为query附加到URL上，如果是POST请求，根据contentType把data序列号成合适的格式</li>
+<li>headers：发送的额外的HTTP头，必须是一个object</li>
+<li>dataType: 接收的数据格式，可以指定为html.xml,json,text等，缺省情况下，根据Content-Type猜测。</li>
+<li>get()</li>
+<li>post()</li>
+<li>getJSON()</li>
+</ul>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><ul>
+<li>$.fn</li>
+<li>$.extend(target,obj1,obj2,…) 越往后优先级别越高</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$.fn.highlight = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line"><span class="keyword">var</span> opts=$.extend(&#123;&#125;,$.fn.highlight.defaults,options);</div><div class="line"><span class="keyword">this</span>.css(<span class="string">'backgroundColor'</span>,opts.backgroundColor).css(<span class="string">'color'</span>,opts.color);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;</div><div class="line">$.fn.highlight.default=&#123;</div><div class="line">    color:<span class="string">'#d85030'</span>,</div><div class="line">    backgroundColor:<span class="string">'#fff8de'</span></div><div class="line">&#125;</div><div class="line">$.fn.highlight.default.color=<span class="string">'#fff'</span>;</div><div class="line">$.fn.highlight.backgroundColor:<span class="string">'#000'</span>;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/07/廖雪峰jQuery教程笔记/" data-id="cisnaaxo0000q16wvzeoy0bya" class="article-share-link">Поделиться</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/08/锋利的jQueryy笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Следующий</strong>
+      <div class="article-nav-title">
+        
+          《锋利的jQuery》笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/04/Bootstrap学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Предыдущий</strong>
+      <div class="article-nav-title">Bootstrap学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Категории</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/游记/">游记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Метки</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/名人墓/">名人墓</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Облако меток</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/名人墓/" style="font-size: 10px;">名人墓</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/09/03/test-1/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/03/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/13/linux下软件打包方法/">Linux下软件打包方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/09/廖雪峰JavaScriptt教程笔记/">廖雪峰JavaScript教程笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/08/锋利的jQueryy笔记/">《锋利的jQuery》笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
