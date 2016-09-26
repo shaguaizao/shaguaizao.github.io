@@ -93,9 +93,7 @@ u (undo)撤销
 * 命令可以查找当前光标下的单词。
 cw 删除从光标位置到当前词结尾处的文本，并切换到插入模式。
 set hls 高亮
-n 执行过查找命令后，n键可以跳到下一个匹配项
-
-第一部分">
+n 执行过查找命令后，n键可以跳到下一个匹配项">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《VIM实用技巧》笔记">
 <meta property="og:url" content="http://yoursite.com/2016/09/26/《VIM实用技巧》笔记/index.html">
@@ -109,10 +107,8 @@ u (undo)撤销
 * 命令可以查找当前光标下的单词。
 cw 删除从光标位置到当前词结尾处的文本，并切换到插入模式。
 set hls 高亮
-n 执行过查找命令后，n键可以跳到下一个匹配项
-
-第一部分">
-<meta property="og:updated_time" content="2016-09-26T15:47:18.000Z">
+n 执行过查找命令后，n键可以跳到下一个匹配项">
+<meta property="og:updated_time" content="2016-09-26T16:03:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《VIM实用技巧》笔记">
 <meta name="twitter:description" content="第1章 Vim解决问题的方式
@@ -124,9 +120,7 @@ u (undo)撤销
 * 命令可以查找当前光标下的单词。
 cw 删除从光标位置到当前词结尾处的文本，并切换到插入模式。
 set hls 高亮
-n 执行过查找命令后，n键可以跳到下一个匹配项
-
-第一部分">
+n 执行过查找命令后，n键可以跳到下一个匹配项">
 
 
 
@@ -385,6 +379,7 @@ n 执行过查找命令后，n键可以跳到下一个匹配项
 <li>set hls 高亮</li>
 <li>n 执行过查找命令后，n键可以跳到下一个匹配项</li>
 </ul>
+<a id="more"></a>
 <h2 id="第一部分-模式"><a href="#第一部分-模式" class="headerlink" title="第一部分 模式"></a>第一部分 模式</h2><blockquote>
 <p>反向删除</p>
 </blockquote>
@@ -403,8 +398,14 @@ n 执行过查找命令后，n键可以跳到下一个匹配项
 <p>删除整个单词</p>
 </blockquote>
 <ul>
-<li>daw ‘delete a word’</li>
+<li><p>daw ‘delete a word’</p>
+</li>
+<li><p>yyp 命令，光标在行首，复制此行</p>
+</li>
+<li>cW 命令，修改第一个单词</li>
+<li>180<c-x> 命令会正向跳到所找到的第一个数字上。</c-x></li>
 </ul>
+<p><strong> 口诀：执行、重复、回退 </strong></p>
 
       
     </div>
