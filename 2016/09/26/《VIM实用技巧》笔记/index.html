@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vim," />
 
 
 
@@ -84,16 +84,28 @@
 
 
 
-<meta name="description" content="Less is More">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://yoursite.com/archive/index.html">
+<meta name="description" content="s 命令：先删除光标下的字符，然后进入插入模式。
+f{char} 查找下一处指定字符出现的位置。
+; 命令会重复查找上一次f命令所查找的字符。
+. 命令重复上次的修改。
+u (undo)撤销">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《VIM实用技巧》笔记">
+<meta property="og:url" content="http://yoursite.com/2016/09/26/《VIM实用技巧》笔记/index.html">
 <meta property="og:site_name" content="shaguaizao's blog">
-<meta property="og:description" content="Less is More">
-<meta property="og:updated_time" content="2016-03-23T16:07:08.000Z">
+<meta property="og:description" content="s 命令：先删除光标下的字符，然后进入插入模式。
+f{char} 查找下一处指定字符出现的位置。
+; 命令会重复查找上一次f命令所查找的字符。
+. 命令重复上次的修改。
+u (undo)撤销">
+<meta property="og:updated_time" content="2016-09-26T13:39:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="归档">
-<meta name="twitter:description" content="Less is More">
+<meta name="twitter:title" content="《VIM实用技巧》笔记">
+<meta name="twitter:description" content="s 命令：先删除光标下的字符，然后进入插入模式。
+f{char} 查找下一处指定字符出现的位置。
+; 命令会重复查找上一次f命令所查找的字符。
+. 命令重复上次的修改。
+u (undo)撤销">
 
 
 
@@ -114,15 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archive/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/26/《VIM实用技巧》笔记/"/>
 
-  <title>
-  
-
-  
-    归档 | shaguaizao's blog
-  
-</title>
+  <title> 《VIM实用技巧》笔记 | shaguaizao's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -153,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -253,9 +259,180 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《VIM实用技巧》笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T21:09:22+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/26/《VIM实用技巧》笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/《VIM实用技巧》笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/26/《VIM实用技巧》笔记/" class="leancloud_visitors" data-flag-title="《VIM实用技巧》笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <ul>
+<li>s 命令：先删除光标下的字符，然后进入插入模式。</li>
+<li>f{char} 查找下一处指定字符出现的位置。</li>
+<li>; 命令会重复查找上一次f命令所查找的字符。</li>
+<li>. 命令重复上次的修改。</li>
+<li>u (undo)撤销</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="shaguaizao WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="shaguaizao Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vim/" rel="tag">#vim</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/09/廖雪峰JavaScriptt教程笔记/" rel="next" title="廖雪峰JavaScript教程笔记">
+                <i class="fa fa-chevron-left"></i> 廖雪峰JavaScript教程笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -266,8 +443,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="archive/index.html"
-           data-title="归档" data-url="http://yoursite.com/archive/index.html">
+      <div class="ds-thread" data-thread-key="2016/09/26/《VIM实用技巧》笔记/"
+           data-title="《VIM实用技巧》笔记" data-url="http://yoursite.com/2016/09/26/《VIM实用技巧》笔记/">
       </div>
     
   </div>
@@ -291,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -383,6 +569,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -486,6 +683,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
