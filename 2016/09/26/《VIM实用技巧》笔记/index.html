@@ -108,7 +108,7 @@ u (undo)撤销
 cw 删除从光标位置到当前词结尾处的文本，并切换到插入模式。
 set hls 高亮
 n 执行过查找命令后，n键可以跳到下一个匹配项">
-<meta property="og:updated_time" content="2016-09-26T16:35:50.000Z">
+<meta property="og:updated_time" content="2016-09-27T02:01:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《VIM实用技巧》笔记">
 <meta name="twitter:description" content="第1章 Vim解决问题的方式
@@ -424,10 +424,21 @@ n 执行过查找命令后，n键可以跳到下一个匹配项">
 <li><c-h> 删除前一个字符（同退格键）</c-h></li>
 <li><c-w> 删除前一个单词</c-w></li>
 <li><c-u> 删至行首</c-u></li>
-<li><c-[> = <esc></esc></c-[></li>
+<li>\<c-[> = \<esc></esc></c-[></li>
 </ul>
 <p>插入-普通模式</p>
-<p><c-o> 切换到插入-普通模式<br>zz 命令重绘屏幕</c-o></p>
+<ul>
+<li>\<c-o> 切换到插入-普通模式</c-o></li>
+<li>zz 命令重绘屏幕</li>
+<li>yt, 拷贝从光标到逗号之间的文本</li>
+<li>\<c-r>0 把刚才复制的文本黏贴到光标所在位置。</c-r></li>
+<li>A 切换到句尾// 含义待定</li>
+<li>\<c-r>= 访问表达寄存器</c-r></li>
+<li>ga 命令查看字符的编码</li>
+<li>\<c-v> 命令后跟一个非数字键，它会插入这个按键本身所代表的字符。</c-v></li>
+<li>\<c-k>{char1}{char2} 插入以二合字母表示的字符</c-k></li>
+<li>R 命令可以由普通模式进入替换模式</li>
+</ul>
 
       
     </div>
