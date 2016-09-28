@@ -108,7 +108,7 @@ u (undo)撤销
 cw 删除从光标位置到当前词结尾处的文本，并切换到插入模式。
 set hls 高亮
 n 执行过查找命令后，n键可以跳到下一个匹配项">
-<meta property="og:updated_time" content="2016-09-27T02:01:59.000Z">
+<meta property="og:updated_time" content="2016-09-27T08:36:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《VIM实用技巧》笔记">
 <meta name="twitter:description" content="第1章 Vim解决问题的方式
@@ -438,7 +438,24 @@ n 执行过查找命令后，n键可以跳到下一个匹配项">
 <li>\<c-v> 命令后跟一个非数字键，它会插入这个按键本身所代表的字符。</c-v></li>
 <li>\<c-k>{char1}{char2} 插入以二合字母表示的字符</c-k></li>
 <li>R 命令可以由普通模式进入替换模式</li>
+<li>按<c-g> 可以在可视模式及选择模式间切换。</c-g></li>
+<li>v 激活面向字符的可视模式，再按v则回到普通模式</li>
+<li>V 普通模式与面向行的可视模式互相切换</li>
+<li>\<c-v> 普通模式与面向列块的可视模式切换ß</c-v></li>
+<li>gv 重选上次的高亮选区</li>
+<li>o 切换高亮选取的活动端</li>
 </ul>
+<p>:set shiftwidth=4 softtabstop=4 expandtab</p>
+<h2 id="只要可能，最好用操作符命令，而不是可视命令"><a href="#只要可能，最好用操作符命令，而不是可视命令" class="headerlink" title="只要可能，最好用操作符命令，而不是可视命令"></a>只要可能，最好用操作符命令，而不是可视命令</h2><p>. 命令在可视模式下有时会有一些异常的表现<br>vit 选择标签里的内容，标签指的是\<a>之类的标签<br>U 命令把所选中的字符转换为大写</a></p>
+<h2 id="结识Vim的命令行模式"><a href="#结识Vim的命令行模式" class="headerlink" title="结识Vim的命令行模式"></a>结识Vim的命令行模式</h2><p>\: Vim会切换到命令行模式<br>\’&lt;,’&gt; 代表了高亮选区<br>\’&lt;,’&gt;normal 对高亮选区中的每一行执行普通模式下的.命令<br>% 代表整个文件范围</p>
+<h2 id="重复上次的Ex命令"><a href="#重复上次的Ex命令" class="headerlink" title="重复上次的Ex命令"></a>重复上次的Ex命令</h2><p>@: 在运行过一次之后，后面就可以用@@命令来重复它<br>gj与gk 按屏幕行向下及向上移动</p>
+<ul>
+<li>w 正向移动到下一单词的开头</li>
+<li>b 反向移动到当前单词/上一单词的开头</li>
+<li>e 正向移动到当前单词/下一单词的结尾</li>
+<li>ge 反向移动到上一单词的结尾</li>
+</ul>
+<p>f,dt. 查找逗号，并删除逗号之后的文字，并保留句号。</p>
 
       
     </div>
@@ -497,6 +514,10 @@ n 执行过查找命令后，n键可以跳到下一个匹配项">
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/28/卸负篇/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -568,7 +589,7 @@ n 执行过查找命令后，n键可以跳到下一个匹配项">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -655,7 +676,7 @@ n 执行过查找命令后，n键可以跳到下一个匹配项">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第1章-Vim解决问题的方式"><span class="nav-number">1.</span> <span class="nav-text">第1章 Vim解决问题的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一部分-模式"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分 模式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第1章-Vim解决问题的方式"><span class="nav-number">1.</span> <span class="nav-text">第1章 Vim解决问题的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一部分-模式"><span class="nav-number">1.1.</span> <span class="nav-text">第一部分 模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#只要可能，最好用操作符命令，而不是可视命令"><span class="nav-number">1.2.</span> <span class="nav-text">只要可能，最好用操作符命令，而不是可视命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结识Vim的命令行模式"><span class="nav-number">1.3.</span> <span class="nav-text">结识Vim的命令行模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重复上次的Ex命令"><span class="nav-number">1.4.</span> <span class="nav-text">重复上次的Ex命令</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
