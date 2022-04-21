@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-04-21T17:30:08.709Z</updated>
+  <updated>2022-04-21T17:53:55.762Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,24 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test xuexi</title>
-    <link href="http://yoursite.com/2022/04/22/test-xuexi/"/>
-    <id>http://yoursite.com/2022/04/22/test-xuexi/</id>
-    <published>2022-04-21T17:29:26.000Z</published>
-    <updated>2022-04-21T17:30:08.709Z</updated>
+    <title>博客重新开张</title>
+    <link href="http://yoursite.com/2022/04/22/%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0/"/>
+    <id>http://yoursite.com/2022/04/22/%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0/</id>
+    <published>2022-04-21T17:40:34.000Z</published>
+    <updated>2022-04-21T17:53:55.762Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="cad安定"><a href="#cad安定" class="headerlink" title="cad安定"></a>cad安定</h2><h1 id="m士大夫"><a href="#m士大夫" class="headerlink" title="m士大夫"></a>m士大夫</h1><pre>sudo gem install sass</pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><pre>sass test.scss test.css</pre><h3 id="四种默认风格"><a href="#四种默认风格" class="headerlink" title="四种默认风格"></a>四种默认风格</h3><ul><li>阿道夫无缩进无扩展</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>时间过的好快，没想到这么快6年就过去了，这6年发生了很多事。我也因不知怎么在新电脑使用hexo发布博客，就不再更新此了。但最近总觉得有很多事有必要记录下来，要不然人生很快就过去了。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;cad安定&quot;&gt;&lt;a href=&quot;#cad安定&quot; class=&quot;headerlink&quot; title=&quot;cad安定&quot;&gt;&lt;/a&gt;cad安定&lt;/h2&gt;&lt;h1 id=&quot;m士大夫&quot;&gt;&lt;a href=&quot;#m士大夫&quot; class=&quot;headerlink&quot; title=&quot;m士大夫&quot;</summary>
+    <summary type="html">&lt;p&gt;时间过的好快，没想到这么快6年就过去了，这6年发生了很多事。我也因不知怎么在新电脑使用hexo发布博客，就不再更新此了。但最近总觉得有很多事有必要记录下来，要不然人生很快就过去了。&lt;/p&gt;
+</summary>
       
     
     
     
     
-    <category term="HEXO" scheme="http://yoursite.com/tags/HEXO/"/>
+    <category term="人生" scheme="http://yoursite.com/tags/人生/"/>
     
   </entry>
   
