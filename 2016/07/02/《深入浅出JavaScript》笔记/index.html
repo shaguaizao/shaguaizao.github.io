@@ -1,0 +1,979 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="shaguaizao's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="第一章存储数据JavaScript使用三种基本数据类型text,number,boolean用const创建常量，常量以全大写字母命名  
+
+parseInt()和parseFloat()
+toFix() 四舍五入到小数点后两位
+isNaN() 检查是否为数字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《深入浅出JavaScript》笔记">
+<meta property="og:url" content="http://yoursite.com/2016/07/02/《深入浅出JavaScript》笔记/index.html">
+<meta property="og:site_name" content="shaguaizao's blog">
+<meta property="og:description" content="第一章存储数据JavaScript使用三种基本数据类型text,number,boolean用const创建常量，常量以全大写字母命名  
+
+parseInt()和parseFloat()
+toFix() 四舍五入到小数点后两位
+isNaN() 检查是否为数字">
+<meta property="og:updated_time" content="2016-07-06T09:37:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《深入浅出JavaScript》笔记">
+<meta name="twitter:description" content="第一章存储数据JavaScript使用三种基本数据类型text,number,boolean用const创建常量，常量以全大写字母命名  
+
+parseInt()和parseFloat()
+toFix() 四舍五入到小数点后两位
+isNaN() 检查是否为数字">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 10804568,
+      author: 'shaguaizao'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/02/《深入浅出JavaScript》笔记/"/>
+
+  <title> 《深入浅出JavaScript》笔记 | shaguaizao's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?044427ea03aecba5dc3c0561d4e4fe0c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">shaguaizao's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">多学一点知识，少写一行代码</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《深入浅出JavaScript》笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-02T00:00:00+08:00" content="2016-07-02">
+              2016-07-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/02/《深入浅出JavaScript》笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/02/《深入浅出JavaScript》笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/02/《深入浅出JavaScript》笔记/" class="leancloud_visitors" data-flag-title="《深入浅出JavaScript》笔记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第一章存储数据"><a href="#第一章存储数据" class="headerlink" title="第一章存储数据"></a>第一章存储数据</h1><p>JavaScript使用三种基本数据类型text,number,boolean<br>用const创建常量，常量以全大写字母命名  </p>
+<ul>
+<li>parseInt()和parseFloat()</li>
+<li>toFix() 四舍五入到小数点后两位</li>
+<li>isNaN() 检查是否为数字</li>
+</ul>
+<a id="more"></a>
+<h2 id="第二章-探索客户端"><a href="#第二章-探索客户端" class="headerlink" title="第二章 探索客户端"></a>第二章 探索客户端</h2><ul>
+<li>setTimeout() 单次定时器</li>
+<li>setInterval() 间隔定时器</li>
+<li>clearInterval() 清除间隔定时器</li>
+<li>document.body.clientHeight</li>
+<li>document.body.clientWidth 客户端窗口宽度<em>客户端窗口只是浏览器窗口里呈现网页的部分，不包含标题栏工具栏</em></li>
+<li>onload事件 在页面或图像加载完成后立即发生</li>
+<li>onresize 浏览器有任何尺寸修改时触发</li>
+<li>readCookie()、writeCookie()、eraseCookie()</li>
+</ul>
+<h1 id="第三章-决策"><a href="#第三章-决策" class="headerlink" title="第三章 决策"></a>第三章 决策</h1><h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch/case"></a>switch/case</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(test data)&#123;</div><div class="line">    <span class="keyword">case</span> match1: <span class="comment">//冒号</span></div><div class="line">    statement;</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">    ...</div><div class="line">    default:</div><div class="line">    statement;</div><div class="line">    <span class="keyword">break</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="第四章-循环"><a href="#第四章-循环" class="headerlink" title="第四章 循环"></a>第四章 循环</h1><ul>
+<li>break 立即跳出循环</li>
+<li>continue 强迫循环跳入下一轮</li>
+</ul>
+<h1 id="第五章-函数"><a href="#第五章-函数" class="headerlink" title="第五章 函数"></a>第五章 函数</h1><blockquote>
+<p>函数其实只是“值”引用到函数主体的变量，函数名称也被称为函数引用。</p>
+</blockquote>
+<h1 id="第六章-表单与验证"><a href="#第六章-表单与验证" class="headerlink" title="第六章 表单与验证"></a>第六章 表单与验证</h1><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><ul>
+<li>. 匹配任何字符，换行符除外  </li>
+<li>\s 匹配空格    </li>
+<li>\d 匹配数字  </li>
+<li>^ 字符串需以模式起始  </li>
+<li>\w 匹配任何字母数字（字母或数字）字符  </li>
+<li>$ 字符串需以模式结束  </li>
+</ul>
+<h3 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h3><ul>
+<li>* 限定符前的子模式必须出现0或多次  </li>
+<li>+ 限定符前的子模式必须出现1或多次  </li>
+<li>{n} 限定符前的字模式必须出现n次</li>
+<li>? 限定符前的子模式必须出现0或1次  </li>
+<li>()集合字符或/和元字符，为字模式  </li>
+<li>{min,max}子模式必须出现至少min次，不可多于max次  </li>
+</ul>
+<h3 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h3><p>[CharacterClass] 字符类是一组匹配单一字符的正则表达式</p>
+<h1 id="第七章-利用DOM分割HTML"><a href="#第七章-利用DOM分割HTML" class="headerlink" title="第七章 利用DOM分割HTML"></a>第七章 利用DOM分割HTML</h1><ul>
+<li>innerHTML 用于获取和设置网页内容</li>
+<li>nodeValue 存储于节点的值，只限文本与属性节点使用（不含元素）</li>
+<li>nodeType 节点类型，用代号表示1，2，3….</li>
+<li>childNode 包含节点下所有子节点的数组，以出现在HTML代码中的顺序而排列</li>
+<li>firstChild 节点下第一个子节点</li>
+<li>lastChild 节点下的最后一个子节点</li>
+</ul>
+<h2 id="二、改变节点三步骤"><a href="#二、改变节点三步骤" class="headerlink" title="二、改变节点三步骤"></a>二、改变节点三步骤</h2><ul>
+<li>removeChild() 移除所有子节点</li>
+<li>creatTextNode() 根据新内容创建新的文本节点</li>
+<li>appendChild() 把新创建的文本子节点附加在节点下</li>
+</ul>
+<h2 id="三、改变元素样式类"><a href="#三、改变元素样式类" class="headerlink" title="三、改变元素样式类"></a>三、改变元素样式类</h2><ul>
+<li>className 提供对元素样式类的访问</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(<span class="built_in">document</span>.getElementById(<span class="string">"decision1"</span>).className);</div></pre></td></tr></table></figure>
+<ul>
+<li>节点的style特性提供对单一样式特性的访问</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span&gt;<span class="xml"><span class="tag">&lt;<span class="name">style:"visibility:hidden"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<h1 id="第八章-为数据带来生命"><a href="#第八章-为数据带来生命" class="headerlink" title="第八章 为数据带来生命"></a>第八章 为数据带来生命</h1><h2 id="一、对象"><a href="#一、对象" class="headerlink" title="一、对象"></a>一、对象</h2><p>对象在一个储存容易内链接变量与函数<br>变量称为对象的特性，函数称为对象的方法</p>
+<h2 id="二、标准JavaScript对象"><a href="#二、标准JavaScript对象" class="headerlink" title="二、标准JavaScript对象"></a>二、标准JavaScript对象</h2><ul>
+<li>Date 在Date对象里，时间以毫秒数表达</li>
+<li>String</li>
+<li>Array</li>
+</ul>
+<h2 id="三、构造函数负责创建对象"><a href="#三、构造函数负责创建对象" class="headerlink" title="三、构造函数负责创建对象"></a>三、构造函数负责创建对象</h2><p>以构造函数创建对象时，我们使用new运算符<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> invitation = <span class="keyword">new</span> Invitation&#123;<span class="string">"Somebody"</span>,<span class="string">"Something"</span>,<span class="string">"Sometime"</span>,<span class="string">"Somewhere"</span>&#125;;</div></pre></td></tr></table></figure></p>
+<p>构造函数大部分工作就是创建对象的特性（需要使用关键字this，还有对象的初始值。)<br>构造函数虽然确立了对象的设计，但实际上并未创建任何事物，直到使用new运算符调用构造函数，才创建了对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Blog</span>(<span class="params">body,date</span>)</span>&#123;</div><div class="line"><span class="keyword">this</span>.body = body;</div><div class="line"><span class="keyword">this</span>.date = date;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> blogEntry = <span class="keyword">new</span> Blog(<span class="string">"Got the new cube I ordered..."</span>,<span class="string">"08/14/2008"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>toString() 每个对象都具有toString()方法，它试图为对象提供文本字符串版的表达方式。</li>
+<li>getMonth()<strong>切记：月份从0开始</strong></li>
+<li>getDate()</li>
+<li>getFullYear()</li>
+</ul>
+<h2 id="四、字符串方法"><a href="#四、字符串方法" class="headerlink" title="四、字符串方法"></a>四、字符串方法</h2><ul>
+<li>indexOf() 寻找字符串是否包含特定子字符串, 字符串索引从0开始，中间的标点或空格算一格，起始位置的引号不算</li>
+<li>charAt() 寻找特定字符在字符串里的位置,只搜索特定字符</li>
+<li>toLowerCase()与toUpperCase() 转换字符串为小写或大写的</li>
+</ul>
+<h2 id="五、Math方法"><a href="#五、Math方法" class="headerlink" title="五、Math方法"></a>五、Math方法</h2><ul>
+<li>round() 把浮点数四舍五入为整数</li>
+<li>floor() 把浮点数无条件舍去为整数</li>
+<li>ceil() 把浮点数无条件进位为整数</li>
+<li>rondom() 产生介于0与1间的随机数</li>
+<li>PI 常量,3.14</li>
+</ul>
+<h1 id="第八章-创建自定义对象"><a href="#第八章-创建自定义对象" class="headerlink" title="第八章 创建自定义对象"></a>第八章 创建自定义对象</h1><h2 id="一、对象类"><a href="#一、对象类" class="headerlink" title="一、对象类"></a>一、对象类</h2><p>是对象的描述，一份描绘对象构成的模板。</p>
+<h2 id="二、对象实例"><a href="#二、对象实例" class="headerlink" title="二、对象实例"></a>二、对象实例</h2><p>根据模板创建的事物  </p>
+<blockquote>
+<p>类就像建筑蓝图，实例则是房子，可以根据类建造很多实例。 方法没有复制到实例的必要性。</p>
+</blockquote>
+<h2 id="三、prototype（原型）对象用于设定隶属于类层的特性和方法，而非属于实例的。"><a href="#三、prototype（原型）对象用于设定隶属于类层的特性和方法，而非属于实例的。" class="headerlink" title="三、prototype（原型）对象用于设定隶属于类层的特性和方法，而非属于实例的。"></a>三、prototype（原型）对象用于设定隶属于类层的特性和方法，而非属于实例的。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Blog.prototype.toHTML = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">...</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> blgoEntry1 = <span class="keyword">new</span> Blog(<span class="string">"Not much going on."</span>,...);</div><div class="line">blogEntry1.toHTML();</div></pre></td></tr></table></figure>
+<p><strong>对象命名的唯一原则，只有首写字母大写。</strong></p>
+<h2 id="四、类特性也能共享"><a href="#四、类特性也能共享" class="headerlink" title="四、类特性也能共享"></a>四、类特性也能共享</h2><blockquote>
+<p>类特性（class property)与类拥有的实例方法很相似，他们都隶属于类，只有单一一份可供所有实例访问。类特性在类里储存一次，但能被所有实例访问。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Blog.prototype.signature = <span class="string">"Puzzler Ruby"</span>;</div></pre></td></tr></table></figure>
+<h2 id="五、类拥有的实例方法"><a href="#五、类拥有的实例方法" class="headerlink" title="五、类拥有的实例方法"></a>五、类拥有的实例方法</h2><p>它虽然属于类，但能访问实例特性<br>类特性的引用方式与一般实例特性一样this.signature</p>
+<h2 id="六、prototype对象能扩展内置JavaScript对象"><a href="#六、prototype对象能扩展内置JavaScript对象" class="headerlink" title="六、prototype对象能扩展内置JavaScript对象"></a>六、prototype对象能扩展内置JavaScript对象</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">String</span>.prototype.scramble = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">...</div><div class="line">&#125;;  </div><div class="line"><span class="comment">//调用  </span></div><div class="line">alert(<span class="keyword">this</span>.signature.scramble());</div><div class="line"><span class="built_in">Date</span>.prototype.shortFormat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span>(<span class="keyword">this</span>.getMonth()+<span class="number">1</span>)+<span class="string">'/'</span>+<span class="keyword">this</span>.getDate()+<span class="string">"/"</span>+<span class="keyword">this</span>.getFullYear();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="七、类方法"><a href="#七、类方法" class="headerlink" title="七、类方法"></a>七、类方法</h2><p>为类所有，但无法访问实例特性的方法，但能访问类特性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//eg.1  </span></div><div class="line">Blog.showSignature = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"This blog created by "</span> + Blog.prototype.signature + <span class="string">"."</span>);</div><div class="line"><span class="comment">//eg.2  </span></div><div class="line">Blog.blogSorter = <span class="function"><span class="keyword">function</span>(<span class="params">blog1,blog2</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> blog2.date - blog1.date;</div><div class="line">&#125;;  </div><div class="line"><span class="comment">//调用  </span></div><div class="line">blog.sort(Blog.blogSorter);</div></pre></td></tr></table></figure></p>
+<p>当某个自变量未被传给函数、方法或构造函数时，在任何试图使用自变量值的代码里，它的值都是null。</p>
+<h1 id="第九章-AJAX"><a href="#第九章-AJAX" class="headerlink" title="第九章 AJAX"></a>第九章 AJAX</h1><blockquote>
+<p>XML没有定义任何标签与属性——它只是一组标签与属性该如何创建与使用的规则。<br>XHTML中的所有空标签都需要加上空格与反斜线</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">This is just a sentence.&lt;br /&gt;</div></pre></td></tr></table></figure>
+<h2 id="AjaxRequest"><a href="#AjaxRequest" class="headerlink" title="AjaxRequest"></a>AjaxRequest</h2><blockquote>
+<p>自定义AjaxRequest对象提供了使用Ajax，但不直接面对XMLHttpRequest对象的便利方式。</p>
+</blockquote>
+<ul>
+<li>getReadyState() 检查请求状态</li>
+<li>getStatus()</li>
+<li>getResponseText() 以纯文本的格式取得Ajax响应里的访问。</li>
+<li>getResponseXML() 以结构XML代码的格式取得Ajax响应里的数据。</li>
+<li>send(type,url,handler,postDataType,postData)</li>
+</ul>
+<blockquote>
+<p>type:GET或POST。<br>GET：获取数据，但不改变服务器上的任何事物。<br>POST：传送数据至服务器，但会造成服务器上的改变。</p>
+</blockquote>
+<ul>
+<li>url:服务器的url  </li>
+<li>handler:用于处理响应的回调函数  </li>
+<li>postDataType：被传输的数据类型（只用于POST，GET不需要）  </li>
+<li>postData:被传输的数据（中用于POST，GET不需要）  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ajaxReq = <span class="keyword">new</span> AjaxRequest();</div><div class="line">ajaxReq.send(<span class="string">"GET"</span>,<span class="string">"blog.xml"</span>,handleRequest);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadBlog</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"blog"</span>).innerHTML=<span class="string">"&lt;img src='wait.gif' alt='loading '/&gt;"</span>;</div><div class="line">    ajaxReq.send(<span class="string">'GET'</span>,<span class="string">'blog.xml'</span>,handleRequest);</div><div class="line">&#125;</div><div class="line"><span class="comment">//eg.</span></div><div class="line"><span class="built_in">Date</span>.prototype.shortFormat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">this</span>.getMonth() + <span class="number">1</span>) + <span class="string">"/"</span> + <span class="keyword">this</span>.getDate() + <span class="string">"/"</span> + <span class="keyword">this</span>.getFullYear();</div><div class="line">&#125;</div><div class="line"><span class="comment">//调用</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initForm</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"date"</span>).value = (<span class="keyword">new</span> <span class="built_in">Date</span>()).shortFormat();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="shaguaizao WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="shaguaizao Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/01/Markdown语法/" rel="next" title="Markdown语法">
+                <i class="fa fa-chevron-left"></i> Markdown语法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/02/HEXO问题及技巧汇总/" rel="prev" title="HEXO常用命令、常见问题及技巧汇总">
+                HEXO常用命令、常见问题及技巧汇总 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/02/《深入浅出JavaScript》笔记/"
+           data-title="《深入浅出JavaScript》笔记" data-url="http://yoursite.com/2016/07/02/《深入浅出JavaScript》笔记/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="shaguaizao" />
+          <p class="site-author-name" itemprop="name">shaguaizao</p>
+          <p class="site-description motion-element" itemprop="description">Less is More</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shaguaizao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zh.lucida.me/" title="Lucida" target="_blank">Lucida</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuanlan.zhihu.com/mactalk" title="池建强" target="_blank">池建强</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.yangzhiping.com/" title="阳志平" target="_blank">阳志平</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章存储数据"><span class="nav-number">1.</span> <span class="nav-text">第一章存储数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-探索客户端"><span class="nav-number">1.1.</span> <span class="nav-text">第二章 探索客户端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-决策"><span class="nav-number">2.</span> <span class="nav-text">第三章 决策</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#switch-case"><span class="nav-number">2.0.1.</span> <span class="nav-text">switch/case</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-循环"><span class="nav-number">3.</span> <span class="nav-text">第四章 循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-函数"><span class="nav-number">4.</span> <span class="nav-text">第五章 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-表单与验证"><span class="nav-number">5.</span> <span class="nav-text">第六章 表单与验证</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">5.1.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元字符"><span class="nav-number">5.1.1.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限定符"><span class="nav-number">5.1.2.</span> <span class="nav-text">限定符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符类"><span class="nav-number">5.1.3.</span> <span class="nav-text">字符类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七章-利用DOM分割HTML"><span class="nav-number">6.</span> <span class="nav-text">第七章 利用DOM分割HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二、改变节点三步骤"><span class="nav-number">6.1.</span> <span class="nav-text">二、改变节点三步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、改变元素样式类"><span class="nav-number">6.2.</span> <span class="nav-text">三、改变元素样式类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-为数据带来生命"><span class="nav-number">7.</span> <span class="nav-text">第八章 为数据带来生命</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、对象"><span class="nav-number">7.1.</span> <span class="nav-text">一、对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、标准JavaScript对象"><span class="nav-number">7.2.</span> <span class="nav-text">二、标准JavaScript对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、构造函数负责创建对象"><span class="nav-number">7.3.</span> <span class="nav-text">三、构造函数负责创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、字符串方法"><span class="nav-number">7.4.</span> <span class="nav-text">四、字符串方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Math方法"><span class="nav-number">7.5.</span> <span class="nav-text">五、Math方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-创建自定义对象"><span class="nav-number">8.</span> <span class="nav-text">第八章 创建自定义对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、对象类"><span class="nav-number">8.1.</span> <span class="nav-text">一、对象类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、对象实例"><span class="nav-number">8.2.</span> <span class="nav-text">二、对象实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、prototype（原型）对象用于设定隶属于类层的特性和方法，而非属于实例的。"><span class="nav-number">8.3.</span> <span class="nav-text">三、prototype（原型）对象用于设定隶属于类层的特性和方法，而非属于实例的。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、类特性也能共享"><span class="nav-number">8.4.</span> <span class="nav-text">四、类特性也能共享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、类拥有的实例方法"><span class="nav-number">8.5.</span> <span class="nav-text">五、类拥有的实例方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、prototype对象能扩展内置JavaScript对象"><span class="nav-number">8.6.</span> <span class="nav-text">六、prototype对象能扩展内置JavaScript对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、类方法"><span class="nav-number">8.7.</span> <span class="nav-text">七、类方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九章-AJAX"><span class="nav-number">9.</span> <span class="nav-text">第九章 AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AjaxRequest"><span class="nav-number">9.1.</span> <span class="nav-text">AjaxRequest</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">shaguaizao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"shaguaizao"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("YpKWD9J2pUEcGTlqJP9FmB0B-gzGzoHsz", "XE47cSO0BxoL4FjL7lfB4Nfk");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
