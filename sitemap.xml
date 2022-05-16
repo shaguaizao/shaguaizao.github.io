@@ -191,21 +191,7 @@
 
   
   <url>
-    <loc>http://yoursite.com/tags/Markdown/</loc>
-    <lastmod>2022-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/tags/Bootstrap/</loc>
-    <lastmod>2022-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/SASS/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -219,14 +205,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E4%BA%BA%E7%94%9F/</loc>
-    <lastmod>2022-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://yoursite.com/tags/vim/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -240,7 +219,21 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/vim/</loc>
+    <loc>http://yoursite.com/tags/Markdown/</loc>
+    <lastmod>2022-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/SASS/</loc>
+    <lastmod>2022-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -248,6 +241,13 @@
   
   <url>
     <loc>http://yoursite.com/tags/JavaScript/</loc>
+    <lastmod>2022-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/%E4%BA%BA%E7%94%9F/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -298,7 +298,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -312,7 +312,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://yoursite.com/categories/%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
