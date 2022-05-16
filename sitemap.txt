@@ -20,11 +20,11 @@ http://yoursite.com/tags/index.html
 http://yoursite.com/archive/index.html
 http://yoursite.com/
 http://yoursite.com/tags/Bootstrap/
-http://yoursite.com/tags/HEXO/
-http://yoursite.com/tags/vim/
-http://yoursite.com/tags/git/
-http://yoursite.com/tags/Markdown/
 http://yoursite.com/tags/SASS/
+http://yoursite.com/tags/HEXO/
+http://yoursite.com/tags/Markdown/
+http://yoursite.com/tags/git/
+http://yoursite.com/tags/vim/
 http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/
 http://yoursite.com/tags/JavaScript/
 http://yoursite.com/tags/%E4%BA%BA%E7%94%9F/
@@ -34,7 +34,7 @@ http://yoursite.com/tags/%E6%96%87%E9%9D%A9-%E6%AD%A6%E6%96%97-%E7%88%B1%E6%83%8
 http://yoursite.com/tags/%E6%B9%BF%E7%96%B9/
 http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/
 http://yoursite.com/categories/Blog/
-http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/
 http://yoursite.com/categories/git/
+http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/
 http://yoursite.com/categories/%E7%AE%A1%E7%90%86/
 http://yoursite.com/categories/%E6%B8%B8%E8%AE%B0/

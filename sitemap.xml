@@ -198,21 +198,14 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/tags/SASS/</loc>
+    <lastmod>2022-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/tags/HEXO/</loc>
-    <lastmod>2022-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/vim/</loc>
-    <lastmod>2022-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/git/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -226,7 +219,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/SASS/</loc>
+    <loc>http://yoursite.com/tags/git/</loc>
+    <lastmod>2022-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/vim/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -298,14 +298,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://yoursite.com/categories/git/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/git/</loc>
+    <loc>http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
